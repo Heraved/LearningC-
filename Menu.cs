@@ -4,38 +4,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dziennik
+namespace DiaryAppx
 {
     class Menu
     {
-        public static void MenuDziennika()
+        public static void MenuShow()
         {
-
-            while (true)
+            Console.WriteLine("Menu:");
+            Console.WriteLine("1. priting student");
+            Console.WriteLine("2. adding student");
+            Console.WriteLine("3. exit");
+        }
+        public static void MenuInPut()
+        {
+            ConsoleKeyInfo info = Console.ReadKey();
+            if (info.Key == ConsoleKey.D3) ;
             {
-                Console.WriteLine("Menu:");
-                Console.WriteLine("1. priting student");
-                Console.WriteLine("2. adding student");
-                Console.WriteLine("3. exit");
+                Environment.Exit(0);
 
-                ConsoleKeyInfo info = Console.ReadKey();
+            }
+            if (info.Key == ConsoleKey.D1)
+            {
+                Console.WriteLine("In progress!");
 
-                if (info.Key == ConsoleKey.D3) ;
-                {
-                    Environment.Exit(0); break;
-
-                }
-                if (info.Key == ConsoleKey.D1)
-                {
-                    Console.WriteLine("In progress!");
-
-                }
-                else if (info.Key == ConsoleKey.D2) ;
-                {
-                    Console.WriteLine("In progress!");
-                }
+            }
+            else if (info.Key == ConsoleKey.D2) ;
+            {
+                Console.WriteLine("In progress!");
             }
         }
-
     }
 }

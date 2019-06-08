@@ -4,13 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dziennik
+namespace DiaryAppx
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Menu.MenuDziennika();
+            while (true)
+            {
+                Menu.MenuShow();
+                Menu.MenuInPut();
+              
+            }
         }
     }
 }
