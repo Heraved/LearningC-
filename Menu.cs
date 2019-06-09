@@ -14,6 +14,8 @@ namespace DiaryAppx
             Console.WriteLine("1. priting student");
             Console.WriteLine("2. adding student");
             Console.WriteLine("3. exit");
+            
+            
         }
         public static void MenuInPut()
         {
@@ -25,10 +27,22 @@ namespace DiaryAppx
             }
             if (info.Key == ConsoleKey.D1)
             {
-                Console.WriteLine("In progress!");
+                Console.WriteLine("Informations about student:");
+            
+                Students StudentsOne = new Students();
+                StudentsOne.firstname = "Tomek";
+                StudentsOne.name = "Kowalski";
+                StudentsOne.dateofbirth = "05.04.1999";
+                List<int> assessment = new List<int>();
+                assessment.Add(3);
+                assessment.Add(4);
+                assessment.Add(5);
+                Console.WriteLine(StudentsOne);
+
+
 
             }
-            else if (info.Key == ConsoleKey.D2) ;
+            else if (info.Key == ConsoleKey.D2) 
             {
                 Console.WriteLine("In progress!");
             }

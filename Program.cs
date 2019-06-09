@@ -14,8 +14,12 @@ namespace DiaryAppx
             {
                 Menu.MenuShow();
                 Menu.MenuInPut();
-              
+                
             }
+            
+
+
+
         }
     }
 }
