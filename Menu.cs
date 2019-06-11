@@ -14,30 +14,34 @@ namespace DiaryAppx
             Console.WriteLine("1. priting student");
             Console.WriteLine("2. adding student");
             Console.WriteLine("3. exit");
-            
-            
+            Console.ReadKey();
+            ConsoleKeyInfo info = Console.ReadKey();
+
+
         }
         public static void MenuInPut()
         {
             ConsoleKeyInfo info = Console.ReadKey();
-            if (info.Key == ConsoleKey.D3) ;
+            if (info.Key == ConsoleKey.D3)
             {
                 Environment.Exit(0);
 
             }
             if (info.Key == ConsoleKey.D1)
             {
+                Console.ReadKey();
                 Console.WriteLine("Informations about student:");
             
-                Students StudentsOne = new Students();
-                StudentsOne.firstname = "Tomek";
-                StudentsOne.name = "Kowalski";
-                StudentsOne.dateofbirth = "05.04.1999";
+                Student StudentOne = new Student();
+                StudentOne.firstname = "Tomek";
+                StudentOne.name = "Kowalski";
+                StudentOne.dateofbirth = "05.04.1999";
                 List<int> assessment = new List<int>();
                 assessment.Add(3);
                 assessment.Add(4);
                 assessment.Add(5);
-                Console.WriteLine(StudentsOne);
+                string result = $"First name: {StudentOne.firstname} Surname: {StudentOne.name} Date of birth: {StudentOne.dateofbirth} Assessment: {StudentOne.assessment}";
+                Console.WriteLine(result);
 
 
 
@@ -46,6 +50,6 @@ namespace DiaryAppx
             {
                 Console.WriteLine("In progress!");
             }
-        }
+        }   
     }
 }
