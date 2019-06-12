@@ -29,26 +29,53 @@ namespace DiaryAppx
             }
             if (info.Key == ConsoleKey.D1)
             {
-                Console.ReadKey();
-                Console.WriteLine("Informations about student:");
-            
+               
+                Console.WriteLine("Informations about students:");
                 Student StudentOne = new Student();
-                StudentOne.firstname = "Tomek";
-                StudentOne.name = "Kowalski";
-                StudentOne.dateofbirth = "05.04.1999";
-                List<int> assessment = new List<int>();
-                assessment.Add(3);
-                assessment.Add(4);
-                assessment.Add(5);
+
                 string result = $"First name: {StudentOne.firstname} Surname: {StudentOne.name} Date of birth: {StudentOne.dateofbirth} Assessment: {StudentOne.assessment}";
                 Console.WriteLine(result);
+
 
 
 
             }
             else if (info.Key == ConsoleKey.D2) 
             {
-                Console.WriteLine("In progress!");
+                Console.WriteLine("Add informations about students:");
+                Console.WriteLine("Wprowadź imię:");
+                Student StudentOne = new Student();
+                StudentOne.firstname = Console.ReadLine();
+                Console.WriteLine("Nazwisko:");
+                StudentOne.name = Console.ReadLine();
+                Console.WriteLine("Data urodzenia:");
+                StudentOne.dateofbirth = Console.ReadLine();
+                Console.WriteLine("Wprowadź oceny:");
+                List<int> assessment = new List<int>();
+                StudentOne.assessment = Console.Read();
+
+                Console.WriteLine("Wciśnij 1 jeśli chcesz dodać kolejnego studenta");
+                Console.WriteLine("Wciśnij 2 jeśli chcesz wrócić do menu");
+                Console.ReadKey();
+                ConsoleKeyInfo number = Console.ReadKey();
+
+
+                if (number.Key == ConsoleKey.D1)
+                {
+                    Student StudentSecond = new Student();
+                    StudentSecond.firstname = Console.ReadLine();
+                    Console.WriteLine("Nazwisko:");
+                    StudentSecond.name = Console.ReadLine();
+                    Console.WriteLine("Data urodzenia:");
+                    StudentSecond.dateofbirth = Console.ReadLine();
+                    Console.WriteLine("Wprowadź oceny:");
+                    List<int> assessmentsecond = new List<int>();
+                    StudentSecond.assessment = Console.Read();
+                }
+                if (number.Key == ConsoleKey.D2)
+                {
+                    Menu.MenuShow();
+                }
             }
         }   
     }
